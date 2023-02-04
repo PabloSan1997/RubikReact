@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RubikReact/static/css/main.3ccf42f9.css",
+    "main.js": "/RubikReact/static/js/main.d99326ed.js",
+    "index.html": "/RubikReact/index.html",
+    "main.3ccf42f9.css.map": "/RubikReact/static/css/main.3ccf42f9.css.map",
+    "main.d99326ed.js.map": "/RubikReact/static/js/main.d99326ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ccf42f9.css",
+    "static/js/main.d99326ed.js"
+  ]
+}
