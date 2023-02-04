@@ -1,7 +1,6 @@
 .area-tiempo{
     width: 100%;
     height: 150px;
-    background: rgb(10, 0, 49);
     display: flex;
 }
 .area-tiempo p{

@@ -3,6 +3,7 @@ import { Contexto } from "../Contexts";
 import './index.css'
 function Resultados(){
     const {pasar , datos, mediana, mejor, peor, avg5, setNumId, setMostrar, setMetodo}=React.useContext(Contexto);
+    let nume = 0;
     return (
         <div className="resultados">
             <div className="finales">
@@ -47,18 +48,22 @@ function Resultados(){
                         <p className="subti">Revoltura:</p>
                     </div>
                 </div>
-                {datos.map(elemento=>(
-                    <Filas
-                    key={elemento.id}
-                    num={elemento.id}
-                    tiempos={elemento.tiempa}
-                    movida={elemento.movida}
-                    onSenalar={setNumId}
-                    onCambiar={pasar}
-                    onMostrar={setMostrar}
-                    onMetodo={setMetodo}
-                    />
-                ))}
+                {datos.map(elemento=>{
+                    nume++
+                    return (
+                        <Filas
+                        key={elemento.id}
+                        num={elemento.id}
+                        tiempos={elemento.tiempa}
+                        movida={elemento.movida}
+                        onSenalar={setNumId}
+                        onCambiar={pasar}
+                        onMostrar={setMostrar}
+                        onMetodo={setMetodo}
+                        elegirColor={nume}
+                        />
+                    )
+                })}
             </div>
         </div>
     );
@@ -72,7 +77,7 @@ function Filas(props){
     }
     return (
         <div 
-        className={`fila ${props.num%2===0 ? 'color1':'color2'}`}
+        className={`fila ${props.elegirColor%2===0 ? 'color1':'color2'}`}
         onClick={funcion}
         >
             <div className="col unos">
