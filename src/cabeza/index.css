@@ -1,0 +1,45 @@
+header{
+    width: 100%;
+    background: rgb(2, 53, 2);
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+}
+header h1{
+    font-size: 2.5rem;
+    width: 30%;
+    height: fit-content;
+    padding: 2px 0;
+    background: rgb(2, 90, 2);
+    border: 2px solid rgb(2, 75, 2);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+header h1:hover{
+    background: rgb(2, 63, 2);
+    
+}
+header h1:active{
+    background: rgb(1, 22, 1);
+    
+}
+
+.algorit{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    height: 35%;
+    margin: auto auto 0 auto;
+    background: rgb(5, 71, 7);
+    box-shadow:inset 0 0 5px black;
+}
+.algorit .texto{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
