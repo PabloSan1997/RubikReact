@@ -3,10 +3,10 @@ import { Contexto } from "../Contexts";
 import './index.css';
 function Cabeza(){
     const [textoSal, setTextoSal]=React.useState(false);
-    const {algoritmo, modificarDatos, setGenerar}=React.useContext(Contexto); 
+    const {algoritmo, setMostrar, setMetodo}=React.useContext(Contexto); 
     function reinicio(){
-        setGenerar(algoritmo);
-        modificarDatos([]);
+        setMostrar(true);
+        setMetodo(1);
     }
     return (
         <header className="cabeza">

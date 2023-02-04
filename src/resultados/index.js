@@ -2,7 +2,7 @@ import React from "react";
 import { Contexto } from "../Contexts";
 import './index.css'
 function Resultados(){
-    const {pasar , datos, mediana, mejor, peor, avg5, borrar, modificarDatos}=React.useContext(Contexto);
+    const {pasar , datos, mediana, mejor, peor, avg5, setNumId, setMostrar, setMetodo}=React.useContext(Contexto);
     return (
         <div className="resultados">
             <div className="finales">
@@ -53,10 +53,10 @@ function Resultados(){
                     num={elemento.id}
                     tiempos={elemento.tiempa}
                     movida={elemento.movida}
+                    onSenalar={setNumId}
                     onCambiar={pasar}
-                    onBorrar={borrar}
-                    todosDatos={datos}
-                    onGenerar={modificarDatos}
+                    onMostrar={setMostrar}
+                    onMetodo={setMetodo}
                     />
                 ))}
             </div>
@@ -65,10 +65,15 @@ function Resultados(){
 }
 
 function Filas(props){
+    const funcion = ()=>{
+        props.onMostrar(true);
+        props.onSenalar(props.num);
+        props.onMetodo(2);
+    }
     return (
         <div 
         className={`fila ${props.num%2===0 ? 'color1':'color2'}`}
-        onClick={()=>props.onBorrar(props.num,props.todosDatos, props.onGenerar)}
+        onClick={funcion}
         >
             <div className="col unos">
                 <p className="num">{props.num}</p>

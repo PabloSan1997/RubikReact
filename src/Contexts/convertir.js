@@ -39,4 +39,5 @@ function quitarMinutos(valor) {
   }
   return valor;
 }
+
 export { pasar };
