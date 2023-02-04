@@ -1,1 +1,96 @@
-/*# sourceMappingURL=index.css.map */
+.resultados {
+  width: 95%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+.resultados .finales {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin: 1% auto 0 auto;
+}
+.resultados .finales .parte {
+  background: rgb(216, 0, 0);
+  height: 50px;
+  display: flex;
+}
+.resultados .finales .parte p {
+  color: rgb(252, 182, 182);
+  font-size: 1.5rem;
+  margin: auto;
+}
+.resultados .finales .parte.uno {
+  background: rgb(56, 0, 0);
+  width: 100px;
+}
+.resultados .finales .parte.dos {
+  width: 150px;
+}
+
+.tiros {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+.tiros .caja1 {
+  width: 100%;
+  display: flex;
+  background: rgb(59, 0, 0);
+  height: 50px;
+}
+.tiros .caja1 .col {
+  display: flex;
+  border: 1px solid rgb(27, 1, 1);
+}
+.tiros .caja1 .col p {
+  margin: auto;
+}
+.tiros .caja1 .col.unos {
+  width: 10%;
+}
+.tiros .caja1 .col.doss {
+  width: 20%;
+}
+.tiros .caja1 .col.tress {
+  width: 70%;
+}
+.tiros .fila {
+  display: flex;
+  min-height: 40px;
+}
+.tiros .fila .col {
+  display: flex;
+  border: 1px solid rgb(48, 2, 2);
+}
+.tiros .fila .col p {
+  margin: auto;
+  font-size: 1.1rem;
+}
+.tiros .fila .col.unos {
+  width: 10%;
+}
+.tiros .fila .col.doss {
+  width: 20%;
+}
+.tiros .fila .col.tress {
+  width: 70%;
+}
+.tiros .fila .col.tress p {
+  margin: auto auto auto 5%;
+  letter-spacing: 5px;
+}
+.tiros .fila.color1 {
+  background: rgb(116, 5, 5);
+}
+.tiros .fila.color2 {
+  background: rgb(158, 3, 3);
+}
+.tiros .fila:hover {
+  background: rgb(39, 2, 2);
+}/*# sourceMappingURL=index.css.map */
