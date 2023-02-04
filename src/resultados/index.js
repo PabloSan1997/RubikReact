@@ -2,7 +2,7 @@ import React from "react";
 import { Contexto } from "../Contexts";
 import './index.css'
 function Resultados(){
-    const {pasar , datos, mediana, mejor, peor, avg5}=React.useContext(Contexto);
+    const {pasar , datos, mediana, mejor, peor, avg5, borrar, modificarDatos}=React.useContext(Contexto);
     return (
         <div className="resultados">
             <div className="finales">
@@ -54,6 +54,9 @@ function Resultados(){
                     tiempos={elemento.tiempa}
                     movida={elemento.movida}
                     onCambiar={pasar}
+                    onBorrar={borrar}
+                    todosDatos={datos}
+                    onGenerar={modificarDatos}
                     />
                 ))}
             </div>
@@ -63,7 +66,10 @@ function Resultados(){
 
 function Filas(props){
     return (
-        <div className={`fila ${props.num%2===0 ? 'color1':'color2'}`}>
+        <div 
+        className={`fila ${props.num%2===0 ? 'color1':'color2'}`}
+        onClick={()=>props.onBorrar(props.num,props.todosDatos, props.onGenerar)}
+        >
             <div className="col unos">
                 <p className="num">{props.num}</p>
             </div>

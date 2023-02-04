@@ -6,7 +6,15 @@ import { useGenerarAlgoritmo } from "./generarAlgoritmo.js";
 import { useRespuestas } from "./resultados.js";
 
 const Contexto = React.createContext();
-
+function borrar(numero,info, callBack){
+  let indice = info.findIndex(elemento=>elemento.id===numero);
+  if(indice!=-1){
+    info.splice(indice, 1);
+    console.log(indice);
+    console.log(info);
+    callBack(info);
+  }
+}
 function ProvedorContexto({ children }) {
   const { algoritmo, setGenerar } = useGenerarAlgoritmo();
   const { activar, tiro } = useCronometro();
@@ -59,7 +67,8 @@ function ProvedorContexto({ children }) {
         mediana,
         mejor,
         peor,
-        avg5
+        avg5,
+        borrar
       }}
     >
       {children}
